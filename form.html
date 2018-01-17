@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+</head>
+<body>
+  <form name="Rejestr" action="send.php" method="get">
+    <fieldset>
+      <legend>Персональна інформація:</legend>
+    <label for="name" required>Введіть своє ім'я: </label>
+    <input type="text" name="name" id="name" placeholder="Enter your name" required> 
+    <br>
+    <br>
+    <label for="birthday">Введіть дату народження: </label>
+    <input type="date" name="birthday" id="birthday" placeholder="Enter your birthday" required>
+        <br>
+		<br>
+	<label for="email">Введіть ел. пошту: </label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <br>
+    </fieldset>
+	<h3>Додаткова інформація</h1>
+    <label for="tel">Введіть номер телефону: </label>
+	<input type="tel" name="tel" id="tel" placeholder="Enter your phone number">
+    <br>
+    <br>
+	<p>Вкажіть стать</p>
+    <input type="radio" name="sex" value="female">Жінка
+    <input type="radio" name="sex" value="male">Чоловік
+    <br>
+    <br>
+    <label for="city">Вкажіть місто: </label>
+    <select name="city" id="city">
+            <option value="lviv">Львів</option>
+            <option value="kyiv">Київ</option>
+            <option value="harkiv">Харків</option>
+    </select>
+    <br>
+    <br>
+	<label for="file">Виберіть файл з біографією: </label>
+	<input type="file" name="file" id="file">
+	<br>
+    <br>
+    <label for="message">Залиште коментар: </label>
+    <textarea name="message" id="message"></textarea>
+    <br>
+    <br>
+	<label for="remember">Запам'ятати дані</label>
+    <input type="checkbox" name="remember" id="remember">
+    <br>
+    <br>
+    <button type="submit" value="Submit" formaction="succsess.html">SUBMIT</button>
+    <button type="reset" value="Reset">RESET</button>
+  </form>
+</body>
