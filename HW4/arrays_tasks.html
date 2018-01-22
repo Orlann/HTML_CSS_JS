@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array methods</title>
+</head>
+<body>
+  <p>Print to console</p>
+  <script>
+   //1. Напишіть функцію, яка буде вертати масив з подвоєними значенями, використовуючи метод map()
+var testArray = [1,2435,544,4545, 4, 6, 7 ,23];
+function double(number){
+  var result = Math.pow(number,2);
+  return result;
+}
+
+var numbers = [2, 5, 7];
+var doubledArray = numbers.map(double);
+alert( doubledArray ); 
+    console.log(testArray);
+
+    //2. Напишіть функцію, яка буде вертати масив з непарними елементами, використовуючи метод filter()
+  function oddFilter(array) {
+   var arr2 = [];   
+   for(i=0; i<array.length; i++){
+        if(i%2 !== 0){
+          arr2.push(array[i]);
+        }
+      }
+   return arr2;
+    }
+var arr = [1, -1, 2, -2, 3];
+alert(oddFilter(arr)); 	//[-1, -2];
+  //  console.oddFilter(arr);
+
+    //3. Напишіть функцію, яка буде вертати середнє арифметичне елментів масиву, використовуючи метод reduce()
+var arr = [1, 2, 3, 4, 5];
+var result = arr.reduce(function(avg, current) {
+  return Math.ceil ((avg + current)/2);
+});
+
+alert( result );
+    console.avg(testArray);
+  </script>
+</body>
+</html>
