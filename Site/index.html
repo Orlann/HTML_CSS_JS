@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>MobiLand</title>  
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/mobiland.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>Ласкаво просимо в магазин MobiLand</h2>
+    <p>Ласкаво просимо в інтернет–магазин цифрової техніки!</p>
+    <p>Нашою основною перевагою є кращий асортимент, зручність покупки онлайн, відмінні ціни і гнучкі можливості доставки. На нашому сайті ви зможете вибрати і купити смартфони найпопулярніших брендів.</p>
+    <p>На весь наш товар надається фірмова гарантія від виробника. Оплатити свою покупку Ви зможете готівкою при отриманні товару. Якщо у Вас виникли будь – які питання – будь ласка, телефонуйте нам за номером 0-800-300-100 (дзвінки зі стаціонарних телефонів на території України безкоштовні) і наші фахівці з радістю дадуть відповідь на Ваші питання!</p>
+  </div>
+  <div style="height: 50px;"></div>
+  <div class="wrapper">
+    <div id="phoneList" class="phones_wrapper"></div>
+    <div id="basket" class="basket_wrapper">
+      <button class="container" onclick="showBasket()">
+        <img src="images/basket.jpg" style="width: 100%">
+        <div id="basketCount" class="basket-count"></div> 
+      </button>
+    </div>
+    <div id="basket-modal" class="modal">
+      <div id="products" class="modal-content">
+        <span id="close-basket" class="close" onclick="closeBasket()">&times;</span>
+        <h3>Вибрані товари</h3>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="footer">
+    <p style="text-align: center;">&copy; Copyright 2018. All Rights Reserved</p>
+  </div>
+</body>
+</html>

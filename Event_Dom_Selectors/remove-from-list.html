@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <ul>
+        <li>Text1 <button onclick="remove(this)">Remove this line</button></li>
+        <li>Text2 <button onclick="remove(this)">Remove this line</button></li>
+        <li>Text3 <button onclick="remove(this)">Remove this line</button></li>
+    </ul>
+    <script>
+        //При клыку на кнопку - видаляти рядок.
+        //Зробити універсальний спочіб, який не залежить від кількості рядків
+		function remove(element){
+            element.parentElement.remove();
+        }
+		
+		
+		
+    </script>
+</body>
+</html>

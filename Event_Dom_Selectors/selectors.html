@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .red {
+        color: red;
+      }
+      .device {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to <span>iPhone</span> Store</h1>
+    <h2>Say hello to the future!</h2>
+    <ul class="device">
+      <li>
+        <h4>iPhone X</h4>
+        <ul>
+          <li>The future of smartphones</li>
+          <li>Price: <span>1299$</span></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="device">
+      <li>
+        <h4>iPhone 8</h4>
+        <ul>
+          <li>the new generation of iPhone</li>
+          <li>Price: <span>700$</span></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="device">
+      <li>
+        <h4>iPhone 7</h4>
+        <ul>
+          <li>the new generation of iPhone</li>
+          <li>Price: <span>600$</span></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h4>iPhone SE</h4>
+        <ul>
+          <li>small and smart one</li>
+          <li>Price: <span>500$</span></li>
+        </ul>
+      </li>
+    </ul>
+	<script>
+	  // !Увага! Все зробити джаваскріптом без використання метода querySelector
+   //1. Знайти елементи з описом продукта та виправити, щоб текст починався з великої букви.
+   // <li>the new generation of iPhone</li> ===> <li>The new generation of iPhone</li>
+   var descriptions = document.getElementsByTagName("li");
+   for (var i = 0; i < descriptions.length; i++) {
+   	str = descriptions[i].innerHTML;
+   	descriptions[i].innerHTML = str.charAt(0).toUpperCase() + str.slice(1);
+   }
+
+   //2. Виділити ціну червоним кольором (додати класс red до елемента)
+   var prices = document.getElementsByTagName("span");
+   for (var i = 1; i < prices.length; i++) {
+   	prices[i].classList.add("red");
+   }
+
+   //3. Додати новий блок з елементами про iPhone 5
+   // назва - iPhone 5
+   // опис - Our Hero
+   // ціна - 300$
+   var newUlElement = document.createElement("ul");
+   newUlElement.className = "device";
+   document.body.appendChild(newUlElement);
+
+   var newLiElement = document.createElement("li")
+   newUlElement.appendChild(newLiElement);
+
+   var newH4Element = document.createElement("h4");
+   newH4Element.innerHTML = "iPhone 5";
+   newLiElement.appendChild(newH4Element);
+
+   var newUl2Element = document.createElement("ul");
+   newLiElement.appendChild(newUl2Element);
+
+   var newUl3Element = document.createElement("li");
+   newUl3Element.innerHTML = "Our Hero";
+   newUl2Element.appendChild(newUl3Element);
+
+   var newUl4Element = document.createElement("li");
+   newUl4Element.innerHTML = "300$";
+   newUl2Element.appendChild(newUl4Element);
+
+     //4. Перевірити чи всі блоки мають клас device, якщо немає то додати його.
+//element.classList.contains(class);
+var blocks = document.body.children;
+for (var i = 0; i < blocks.length; i++) {
+	if (blocks[i].tagName == "UL" && !blocks[i].classList.contains('device')) {
+		blocks[i].classList.add('device');
+	}
+}
+	
+	//5. Замінити всі слова iPhone на Android
+var iPhones = document.getElementsByTagName('h4');
+for (var i = 0; i < iPhones.length; i++) {
+	var text = iPhones[i].innerHTML.replace("iPhone", "Android");
+	iPhones[i].innerHTML = text;
+}
+
+    
+	</script>
+   </body>
+</html>
+
